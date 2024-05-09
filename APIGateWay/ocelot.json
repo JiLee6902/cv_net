@@ -1,0 +1,84 @@
+{
+    "Routes": [
+        {
+            "UpstreamPathTemplate": "/api/Blogs",
+            "UpstreamHttpMethod": [ "Get", "Post" ],
+
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 44305
+                }
+            ],
+            "DownstreamPathTemplate": "/Blogs"
+        },
+        {
+            "UpstreamPathTemplate": "/api/Blogs/{id}",
+            "UpstreamHttpMethod": [ "Put", "Delete", "Get" ],
+
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 44305
+                }
+            ],
+            "DownstreamPathTemplate": "/Blogs/{id}"
+        },
+        {
+            "UpstreamPathTemplate": "/api/Blogs/GetBlogAdmin",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 44305
+                }
+            ],
+            "DownstreamPathTemplate": "/Blogs/GetBlogAdmin",
+            "UpstreamHttpMethod": [ "Get" ]
+        },
+
+        {
+            "UpstreamPathTemplate": "/api/Users",
+            "UpstreamHttpMethod": [ "Get"],
+
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 44359
+                }
+            ],
+            "DownstreamPathTemplate": "/Users"
+        },
+        {
+            "UpstreamPathTemplate": "/api/Users/{id}",
+            "UpstreamHttpMethod": [ "Put", "Delete", "Get",  "Post" ],
+
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 44359
+                }
+            ],
+            "DownstreamPathTemplate": "/Users/{id}"
+        },
+        {
+            "UpstreamPathTemplate": "/api/Users/register",
+            "DownstreamScheme": "https",
+            "DownstreamHostAndPorts": [
+                {
+                    "Host": "localhost",
+                    "Port": 44359
+                }
+            ],
+            "DownstreamPathTemplate": "/Users/register",
+            "UpstreamHttpMethod": [ "Post" ]
+        }
+    ],
+    "GlobalConfiguration": {
+        "BaseUrl": "http://localhost:44329"
+    }
+}
